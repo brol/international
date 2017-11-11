@@ -1,0 +1,72 @@
+<div id="content-selected">
+  <div id="content-selected-post">
+
+  <tpl:Entries selected="1" lastn="4">
+    <div id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}">
+
+<div class="left">
+    <div class="img-container">
+    <div class="img-container-inner">
+    <a href="{{tpl:EntryURL}}">{{tpl:EntryFirstImage size="m" with_category="1"}}</a>
+    </div>
+    </div>
+</div>
+
+<div class="right">
+
+    <h2 class="post-title"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
+
+    <p class="post-info">{{tpl:EntryDate}}</p>
+
+    <!-- # --BEHAVIOR-- publicEntryBeforeContent -->
+    {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
+
+    <!-- # Entry with an excerpt -->
+    <tpl:EntryIf extended="1">
+      <div class="post-content">{{tpl:EntryExcerpt encode_html="1" remove_html="1" cut_string="220"}}<span class="readmore-ellipsis">...</span></div>
+      <p class="read-it"><a href="{{tpl:EntryURL}}"
+      title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue
+      reading}}</a></p>
+    </tpl:EntryIf>
+
+    <!-- # Entry without excerpt -->
+    <tpl:EntryIf extended="0">
+      <div class="post-content">{{tpl:EntryContent encode_html="1" remove_html="1" cut_string="220"}}<span class="readmore-ellipsis">...</span></div>
+      <p class="read-it"><a href="{{tpl:EntryURL}}"
+      title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue
+      reading}}</a></p>
+    </tpl:EntryIf>
+
+    <!-- # --BEHAVIOR-- publicEntryAfterContent -->
+    {{tpl:SysBehavior behavior="publicEntryAfterContent"}}
+</div>
+
+    </div>
+  </tpl:Entries>
+
+  </div> <!-- End #content-selected-post -->
+
+<div class="tabs">
+<a href="#">1</a>
+<a href="#">2</a>
+<a href="#">3</a>
+<a href="#">4</a>
+</div>
+
+</div> <!-- End #content-selected -->
+
+<script type="text/javascript">
+$(function() {
+
+	$("div.tabs").tabs("#content-selected-post > div", {
+
+		// enable "cross-fading" effect
+		effect: 'fade',
+		fadeOutSpeed: "normal",
+
+		// start from the beginning after the last tab
+		rotate: true,
+
+	}).slideshow({ autoplay: true, autopause: true, interval: 3000 });
+});
+</script>

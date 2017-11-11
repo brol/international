@@ -1,0 +1,15 @@
+/*
+  International (version 1.1)
+   * description : thème semi-magazine
+   * auteur : David YIM
+     url de support : http://davidyim.fr/
+     e-mail de support : contact@davidyim.fr
+   * Creative Commons : Paternité-Partage des Conditions Initiales à l'Identique 2.0 France
+     http://creativecommons.org/licenses/by-sa/2.0/fr/
+
+  International (v1.2)
+  Contributeur : Pierre Van Glabeke
+*/
+#nav, #navsm, #nav-categories {display:none;}
+
+#top {padding:80px 0 20px;}

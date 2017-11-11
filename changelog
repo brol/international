@@ -1,0 +1,20 @@
+v1.5 - 11-11-2017 - Pierre Van Glabeke
+* modifs html
+* modifs css
+* localisation
+* jeu mustek
+* dc2.9 requis
+
+v1.4 - 07-03-2015 - Pierre Van Glabeke
+* modif setting
+
+v1.3.1 - 24-02-2015 - Pierre Van Glabeke
+* correction post.html
+
+v1.3 - 23-02-2015 - Pierre Van Glabeke
+* ajout configurateur pour choix du type de menu :
+  * SimpleMenu ou Menu des catégories (accueil, catégories (niveaux 1 et 2), archives, contact)
+* localisation
+* html
+* modifications css
+* modification traitement home

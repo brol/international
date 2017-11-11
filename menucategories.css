@@ -1,0 +1,75 @@
+/*
+  International (version 1.1)
+   * description : thème semi-magazine
+   * auteur : David YIM
+     url de support : http://davidyim.fr/
+     e-mail de support : contact@davidyim.fr
+   * Creative Commons : Paternité-Partage des Conditions Initiales à l'Identique 2.0 France
+     http://creativecommons.org/licenses/by-sa/2.0/fr/
+
+  International (v1.2)
+  Contributeur : Pierre Van Glabeke
+*/
+#navsm {display:none;}
+
+#top {padding:80px 0 40px;}
+
+#nav-categories {
+  float : left;
+  margin : 0;
+  padding : 20px 0 0 0;
+}
+#nav-categories ul {
+  margin : 0;
+  padding : 5px 0 0 0;
+  float : left;
+}
+#nav-categories ul li.category-first {
+  margin : 0 20px 0 0;
+  padding : 0;
+  display : block;
+  float : left;
+  font-size : 1.2em;
+  position : relative;
+}
+#nav-categories ul li.category-first a {
+  display : block;
+  border-bottom : 1px dotted #ccc;
+}
+#nav-categories img {
+  display : none;
+}
+* html #nav-categories ul li.category-first a {
+  display : inline-block;
+}
+#nav-categories ul li.category-first ul {
+  position : absolute;
+  top : 0;
+  left : 0;
+  display : block;
+  visibility : hidden;
+  border : none;
+  z-index : 1;
+}
+#nav-categories ul li.category-first ul li.category-sub {
+  display : list-item;
+  float : none;
+}
+#nav-categories ul li.category-first ul li.category-sub ul {
+  top : 0;
+}
+#nav-categories ul li.category-first ul li.category-sub a {
+  width : 160px;
+  padding : 5px 10px;
+  margin : 0 0 1px 0;
+  background : #000;
+  color : #fff;
+  font-size : 0.8em;
+  border : none;
+  opacity : 0.75;
+}
+#nav-categories ul li.category-first ul li.category-sub a:hover {
+  background : #ddd;
+  color : #000;
+}
+/*#nav-categories ul li.menucontactme {display:none;}*/

@@ -1,0 +1,631 @@
+/* 
+  International (version 1.1)
+   * description : thème semi-magazine
+   * auteur : David YIM
+     url de support : http://davidyim.fr/
+     e-mail de support : contact@davidyim.fr
+   * Creative Commons : Paternité-Partage des Conditions Initiales à l'Identique 2.0 France
+     http://creativecommons.org/licenses/by-sa/2.0/fr/
+
+  International (v1.2)
+  Contributeur : Pierre Van Glabeke
+*/
+
+a, a:link, a:visited {
+  color : #222;
+  text-decoration : none;
+  font-weight : bold;
+}
+a:hover {
+  color : #cc0000;
+}
+h1, h2, h3, h4, h5 {
+  font-weight : normal;
+  font-family : Georgia, Serif;
+}
+ul {
+  margin-left : 0;
+  list-style : outside none none;
+}
+body {
+  color : #333;
+  font-size : 72.5%;
+  line-height : 1.6;
+  font-family : "Helvetica Neue", Arial, Sans-Serif;
+  background : #fff;
+  border-top : 4px solid #222;
+  margin:0;
+}
+#page {
+  width : 960px;
+  margin : 0 auto;
+  position : relative;
+}
+#top {
+  width : 100%;
+  float : left;
+  margin : 0;
+  background : #fff;
+}
+#top h1 {
+  margin : 0;
+  padding : 0;
+  font-family : "Hoefler Text", Baskerville, Palatino, Palatino Linotype, Times, serif;
+  font-size : 2em;
+  font-style : italic;
+  float : left;
+}
+.blogDescription {
+  margin : 0;
+  font-style : italic;
+  clear:both;
+}
+
+#top #search {
+  width : 240px;
+  float : right;
+  margin : 10px 0 0 0;
+  padding : 1px;
+  height : 27px;
+  border : 1px solid #ddd;
+  background : #eee;
+}
+#top #search form {
+  margin : 0;
+  padding : 0;
+  height : 25px;
+  border : none;
+  background : #fff;
+  border : 1px solid #aaa;
+  border-right : 1px solid #ddd;
+  border-bottom : 1px solid #ddd;
+}
+#top #search form #q {
+  width : 178px;
+  border : none;
+  color : #ccc;
+  padding : 5px 10px;
+  background : transparent;
+  float : left;
+  font-family : inherit;
+  font-size : 1em;
+}
+#top #search form #q:focus {
+color : #333;
+}
+#top #search form .submit {
+  border : none;
+  padding : 0;
+  background : transparent url('img/icon-search.png') no-repeat center center;
+  width : 30px;
+  height : 26px;
+  float : right;
+  text-transform : uppercase;
+  font-family : inherit;
+  font-size : 1em;
+  color : #fff;
+  cursor : pointer;
+  text-indent : -9999px;
+}
+#prelude {
+  position : absolute;
+  top : 0;
+  right : 0;
+  text-transform : lowercase;
+  top : 80px;
+  visibility : hidden;
+}
+#wrapper {
+  width : 100%;
+  float : left;
+  clear : both;
+  padding : 0;
+  background : #fff;
+}
+#main {
+  width : 100%;
+  float : left;
+  clear : both;
+}
+#breadcrumb {margin:0 0 20px;padding:0;}
+#content-info {
+  margin : 0 0 40px 0;
+}
+#content-info h2 {
+  font-size : 3em;
+  margin : 0;
+}
+#content-info p {
+  font-size : 1.2em;
+  font-family : Georgia, Serif;
+  margin-right : 500px;
+}
+.content-inner p {
+  font-size : 1.2em;
+  font-family : Georgia, Serif;
+}
+.dc-404 #content-info {
+  margin : 0;
+}
+.dc-404 .content-inner p {
+  font-size : 1.2em;
+  font-family : Georgia, Serif;
+  margin : 0 0 40px 0;
+}
+.content-inner .column-year {
+  width : 150px;
+  margin : 0 10px 30px 0;
+  float : left;
+}
+.content-inner .tags {
+  float : left;
+  margin : 0 0 30px 0;
+}
+.content-inner .tags li {
+  display : block;
+  width : 150px;
+  margin : 0 10px 10px 0;
+  float : left;
+  border-bottom : 1px solid #ddd;
+}
+#navlinks {
+  margin : 0;
+  padding : 0;
+}
+#navlinks a {
+  font-weight : normal;
+  font-style : italic;
+  border-bottom : 1px dotted #ccc;
+}
+#content-selected {
+  color : #fff;
+  width : 100%;
+  height : 210px;
+  float : left;
+  clear : both;
+  margin : 0 0 40px 0;
+  padding : 0;
+  position : relative;
+}
+#content-selected a {
+  color : #fff;
+}
+#content-selected-post {
+  position : relative;
+  width : 100%;
+  height : 210px;
+  margin : 0 0 1px 0;
+}
+#content-selected .post {
+  width : 100%;
+  float : left;
+  clear : both;
+  position : absolute;
+  top : 0;
+  left : 0;
+  display : none;
+  background : #121212 url('img/background.png') repeat left top;
+}
+#content-selected .left {
+  width : 320px;
+  height : 210px;
+  margin : 0 30px 0 0;
+  float : left;
+  border-right : 1px solid #fff;
+}
+#content-selected .left .img-container {
+  width : 320px;
+  height : 210px;
+  float : left;
+}
+#content-selected .left .img-container-inner {
+  width : 100%;
+  height : 100%;
+  position : relative;
+  overflow : hidden;
+  background : #fff;
+}
+#content-selected .left .img-container-inner img {
+  width : 330px;
+  margin : 0;
+  padding : 0;
+  position : absolute;
+  left : 0;
+  bottom : 0;
+}
+#content-selected .right {
+  width : 450px;
+  float : left;
+  padding : 25px 0 0 0;
+}
+#content-selected .right .post-title {
+  margin : 0 0 8px 0;
+  padding : 0;
+}
+#content-selected .right .post-info {
+  position : absolute;
+  top : 20px;
+  right : 0;
+  padding : 0 10px 5px 0;
+  font-size : 1em;
+  border-left : 0 solid #fff;
+  border-bottom : 1px solid #fff;
+  border-top : 0 solid #fff;
+  border-right : 0 solid #fff;
+}
+#content-selected .right .post-content {
+  font-size : 1.1em;
+}
+#content-selected .tabs {
+  width : 240px;
+  float : right;
+  position : absolute;
+  bottom : 0;
+  right : 0;
+}
+#content-selected .tabs a {
+  display : block;
+  width : 10px;
+  height : 23px;
+  margin : 0 0 1px 1px;
+  padding : 5px 10px 0 10px;
+  float : left;
+  background : #282828;
+  outline : none;
+  text-align : center;
+  font-weight : normal;
+}
+#content-selected .tabs a.current {
+  background : #484848;
+}
+#content-selected .tabs-buttons {
+  width : 106px;
+  float : right;
+  position : absolute;
+  bottom : 0;
+  right : 0;
+}
+#content-selected .tabs-buttons a {
+  display : block;
+  width : 10px;
+  height : 20px;
+  margin : 0 0 1px 1px;
+  padding : 5px 10px 0 10px;
+  float : left;
+  background : #282828;
+  outline : none;
+  text-align : center;
+  font-weight : normal;
+  cursor : pointer;
+}
+#content-selected .tabs-buttons a.current {
+  background : #484848;
+}
+#content-regular {
+  width : 100%;
+  float : left;
+  clear : both;
+  margin : 0;
+  padding : 0 0 40px 0;
+}
+#content-regular .post {
+  width : 219px;
+  margin : 0 0 0 10px;
+  padding : 0 0 0 10px;
+  float : left;
+  border-left : 1px solid #ddd;
+}
+.dc-archive-month #content-regular .post {
+  width : 230px;
+  height : 260px;
+  margin : 0 10px 0 0;
+  padding : 0;
+  border : none;
+}
+#content-regular .post-category {
+  margin : 0 0 5px 0;
+}
+#content-regular .post-category a {
+  text-transform : uppercase;
+  font-size : 0.85em;
+}
+#content-regular .first {
+  border : none;
+  margin : 0;
+  padding : 0;
+}
+.dc-post .post .article,
+.dc-page .post .article {
+  width : 480px;
+  float : left;
+  font-size : 1.1em;
+  margin : 0 0 80px 0;
+  padding : 0 0 0 160px;
+}
+.dc-post .post .post-excerpt p,
+.dc-page .post .post-excerpt p {
+  margin-top:0;
+}
+.dc-post .post .post-content p
+.dc-page .post .post-content p {
+  margin-top:0;
+}
+.post-excerpt,
+.post-content {
+  clear:both;
+}
+.dc-post .post-title,
+.dc-page .post-title {
+  margin : 0 0 1em 0;
+  padding : 0 320px 1em 0;
+  font-size : 3em;
+  border-bottom : 1px solid #ddd;
+  line-height : 1.3;
+}
+.dc-post .post img,
+.dc-page .post img {
+  max-width : 100%;
+}
+.post-title {
+  margin : 0;
+  line-height : 1;
+}
+.post-title a {
+  font-weight : normal;
+}
+.post-info {
+  font-style : italic;
+  font-family : Georgia, serif;
+}
+.post-excerpt, .post-content {
+  margin-right : 20px;
+}
+.dc-post .article ul,
+.dc-page .article ul,
+#comments dd ul {
+  list-style:inherit;
+}
+.post pre {
+  background : #efefef;
+  overflow : auto;
+  padding : 10px;
+}
+.read-it a {
+  font-style : italic;
+  border-bottom : 1px solid #ddd;
+}
+.post-meta {
+  width : 320px;
+  margin : 0;
+  padding : 0;
+  float : right;
+}
+.post-meta a {
+  font-weight : normal;
+  border-bottom : 1px dotted #bbb;
+  font-style : italic;
+}
+.post-meta .post-info {
+  font-family : "Helvetica Neue", Arial, Sans-Serif;
+  font-style : normal;
+  border-bottom : 1px solid #ddd;
+  padding : 0 0 20px 0;
+}
+.post-meta .post-tags {
+  width : 100%;
+  border-bottom : 1px solid #ddd;
+  padding : 0 0 20px 0;
+}
+.post-meta .cat-related ul {
+  padding : 0 0 20px 0;
+  border-bottom : 1px solid #ddd;
+}
+.post-meta #attachments {
+  width : 100%;
+  padding : 0;
+}
+.post-meta #attachments ul {
+  margin:0;
+  padding : 0;
+}
+.post-meta h3 {
+  font-size : 1em;
+  font-family : "Helvetica Neue", Arial, Sans-Serif;
+  font-weight : bold;
+  text-transform : uppercase;
+  margin : 0 0 0.25em 0;
+}
+.pagination {
+  width : 100%;
+  float : left;
+  clear : both;
+  margin : 0;
+  padding : 40px 0 0 0;
+}
+.pagination a {
+  cursor : pointer;
+}
+
+#comments, #pings {
+  width : 800px;
+  float : right;
+  clear : both;
+  margin : 0;
+}
+#comments h3, #comment-form h3, #pings h3 {
+  text-transform : lowercase;
+  margin : 0 0 40px -160px;
+  padding : 0 0 20px 0;
+  border-bottom : 1px solid #ddd;
+}
+#comments dl, #pings dl {
+  width : 800px;
+  margin : 0 0 40px 0;
+  padding : 0;
+  float : left;
+  clear : both;
+}
+#comments dt, #pings dt {
+  width : 320px;
+  float : right;
+  border-bottom : 1px solid #ddd;
+  padding : 0 0 20px 0;
+}
+#comments dt .comment-number, #pings dt .comment-number {
+  margin : 0;
+}
+#comments dt .comment-author, #pings dt .comment-author {
+  margin : 0;
+  font-size : 1.5em;
+  font-weight : bold;
+}
+#comments dt .comment-date, #pings dt .comment-date {
+  margin : 0;
+  font-weight : normal;
+}
+#comments dd, #pings dd {
+  width : 460px;
+  float : left;
+  margin : 0;
+  font-size : 1.1em;
+}
+#comments pre, #pings pre {
+  background : #efefef;
+  overflow : auto;
+  padding : 10px;
+}
+#comment-form {
+  width : 800px;
+  float : right;
+  clear : both;
+  margin : 80px 0;
+}
+#comment-form fieldset {
+  margin : 0;
+  padding : 0;
+  border : none;
+}
+#comment-form .field label {
+  display : block;
+  float : left;
+  width : 160px;
+  font-weight : normal;
+  text-transform : lowercase;
+}
+#comment-form .field input, #comment-form .field textarea {
+  width : 280px;
+  border : 1px solid #bbb;
+  border-bottom : 1px solid #ddd;
+  border-right : 1px solid #ddd;
+  background : #efefef;
+  font-family : inherit;
+  font-size : 1em;
+  padding : 5px 10px;
+  -moz-border-radius : 3px;
+  -webkit-border-radius : 3px;
+}
+#comment-form .jstEditor textarea {margin:0 0 0 155px;}
+#comment-form .jstHandle {margin:0 0 0 155px;width:320px;}
+#pr {
+  width : 100%;
+  float : left;
+  clear : both;
+  padding : 40px 0;
+}
+#pr dl {
+  width : 300px;
+  margin-left : 145px;
+}
+#pr .submit {
+  margin-left : 160px;
+}
+p.error, p.message {
+  font-size : 1.25em;
+  font-weight : bold;
+  margin : 0;
+}
+.form-help, .remember {
+  width : 300px;
+  margin-left : 160px;
+}
+.buttons input {
+  border : none;
+  background : #333;
+  font-family : inherit;
+  color : #fff;
+  padding : 4px 8px;
+  font-size : 1em;
+  cursor : pointer;
+  -moz-border-radius : 3px;
+  -webkit-border-radius : 3px;
+}
+.buttons .preview {
+  margin-left : 160px;
+}
+#ping-url,
+#comments-feed,
+#sidebar {
+  width : 100%;
+  float : left;
+  clear : both;
+}
+#sidebar {
+  border-top : 3px double #ddd;
+  margin : 0;
+  padding : 40px 0 20px 0;
+}
+#sidebar #blognav div, #sidebar #blogextra div {
+  width : 150px;
+  margin : 0 10px 0 0;
+  float : left;
+}
+#sidebar #search {
+  display : none;
+  visibility:hidden;
+}
+#sidebar h2 {
+  font-size : 0.85em;
+  font-weight : bold;
+  text-transform : uppercase;
+  font-family : "Helvetica Neue", Arial, Sans-Serif;
+  margin-bottom:1.2em;
+}
+#sidebar h3 {
+  font-size : 1em;
+  margin:0;
+  padding:0;
+}
+#sidebar ul {padding:0;}
+#sidebar li a {
+  font-weight : normal;
+  font-style : italic;
+  border-bottom : 1px dotted #bbb;
+  margin: 0;
+}
+#sidebar .links ul {padding:0;margin:0;}
+#sidebar .links h3 {margin:7px 0 0 0;}
+#sidebar .categories li li {margin:0 0 0 8px;}
+#sidebar .categories li.category-current a {
+	font-weight: bold;
+}
+#sidebar .categories li.category-current li {
+	font-weight: normal;
+}
+#sidebar .calendar caption {width:150px;}
+#sidebar .calendar th {font-size:0.73em;}
+#sidebar .calendar td {font-size:0.9em;}
+
+#sidebar img {max-width:100%;}
+#sidebar a img, #sidebar img a {border:none !important;}
+#footer {
+  width : 960px;
+  float : left;
+  clear : both;
+  margin : 0;
+  padding : 0;
+  background : #fff;
+}
+#footer p {
+  margin : 0;
+  padding : 80px 0;
+}

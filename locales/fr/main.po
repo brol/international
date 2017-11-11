@@ -1,0 +1,29 @@
+# Language: Français
+# Module: international - 1.5
+# Date: 2017-11-11 18:48:03
+# Translated with translater 2017.05.10
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: international 1.5\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2017-11-11T18:48:03+00:00\n"
+"Last-Translator: brol\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: _config.php:29
+msgid "Menu categories"
+msgstr "Menu des catégories"
+
+#: _config.php:73
+msgid "Menu to display:"
+msgstr "Menu à afficher :"
+
+#: _config.php:76
+msgid "Link order for the \"Menu categories\": Home - Links blog categories (level 1 and 2) - Archive - Contact."
+msgstr "Ordre des liens pour le \"Menu des catégories\" : Accueil - Liens des catégories du blog (niveaux 1 et 2) - Archives - Contact."
+
