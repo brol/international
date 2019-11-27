@@ -14,10 +14,10 @@ $this->registerModule(
 	/* Name */			"International",
 	/* Description*/		"Thème magazine en noir et blanc",
 	/* Author */			"David YIM, Pierre Van Glabeke",
-	/* Version */			'1.5',
+	/* Version */			'1.6',
 	array(
 		'type'	 =>	'theme',
 		'tplset' => 'mustek',
-		'dc_min' => '2.9'
+		'dc_min' => '2.15'
 	)
 );

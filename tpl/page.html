@@ -3,7 +3,6 @@
 <tpl:Block name="head-linkrel">
 	<link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
 	<tpl:EntryIf pings_active="1"><link rel="pingback" href="{{tpl:BlogXMLRPCURL}}" /></tpl:EntryIf>
-
 	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:BlogFeedURL type="atom"}}" />
 </tpl:Block>
 
@@ -16,7 +15,6 @@
     <!-- # --BEHAVIOR-- publicEntryBeforeContent -->
     {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
 
-    <!-- # Entry with an excerpt -->
     <tpl:EntryIf extended="1">
       <div class="post-excerpt">{{tpl:EntryExcerpt}}</div>
     </tpl:EntryIf>
@@ -47,15 +45,10 @@
 					{{tpl:include src="_audio_player.html"}}
 				</tpl:AttachmentIf>
 				<tpl:AttachmentIf is_video="1">
-					<tpl:AttachmentIf is_flv="0">
-						{{tpl:include src="_video_player.html"}}
-					{{tpl:else}}
-						{{tpl:include src="_flv_player.html"}}
-					</tpl:AttachmentIf>
+					{{tpl:include src="_video_player.html"}}
 				</tpl:AttachmentIf>
 				<tpl:AttachmentIf is_audio="0" is_video="0">
-					<a href="{{tpl:AttachmentURL}}"
-						title="{{tpl:AttachmentFileName}} ({{tpl:AttachmentSize}})">{{tpl:AttachmentTitle}}</a>
+					<a href="{{tpl:AttachmentURL}}" title="{{tpl:AttachmentFileName}} ({{tpl:AttachmentSize}})">{{tpl:AttachmentTitle}}</a>
 				</tpl:AttachmentIf>
 					</li>
 		<tpl:AttachmentsFooter>
